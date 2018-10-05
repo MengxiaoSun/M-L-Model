@@ -9,9 +9,9 @@ x1[0] := 1;
 x2[0] := 2; 
 x3[0] := 3; 
 for t from 0 to 4 do 
-x1[t+1] := (2*(1-b))*x1[t]/(alpha1*x2[t]+beta1*x3[t]+x1[t]+1)+b*x1[t]; 
-x2[t+1] := (2*(1-b))*x2[t]/(alpha2*x3[t]+beta2*x1[t]+x2[t]+1)+b*x2[t]; 
-x3[t+1] := (2*(1-b))*x3[t]/(alpha3*x1[t]+beta3*x2[t]+x3[t]+1)+b*x3[t] 
+x1[t+1] := evalf((2*(1-b))*x1[t]/(alpha1*x2[t]+beta1*x3[t]+x1[t]+1)+b*x1[t]); 
+x2[t+1] := evalf((2*(1-b))*x2[t]/(alpha2*x3[t]+beta2*x1[t]+x2[t]+1)+b*x2[t]); 
+x3[t+1] := evalf((2*(1-b))*x3[t]/(alpha3*x1[t]+beta3*x2[t]+x3[t]+1)+b*x3[t]); 
 end do;
 A1 := Matrix([[x1[0]^2-x1[0], -x1[1]*x2[0], -x1[1]*x3[0], x1[0]*x2[0], x1[0]*x3[0], x1[0]*x1[1]-2*x1[0]+x1[1]], 
 [x1[1]^2-x1[1], -x1[2]*x2[1], -x1[2]*x3[1], x1[1]*x2[1], x1[1]*x3[1], x1[1]*x1[2]-2*x1[1]+x1[2]], 
