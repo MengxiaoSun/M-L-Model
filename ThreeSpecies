@@ -1,13 +1,13 @@
 b := 1/2; 
-alpha1 := 2; 
-beta1 := 3; 
-alpha2 := 4; 
+alpha1 := 1; 
+beta1 := 2; 
+alpha2 := 3; 
 beta2 := 1; 
 alpha3 := 2;
 beta3 := 2; 
-x1[0] := 5; 
-x2[0] := 10; 
-x3[0] := 5; 
+x1[0] := 1; 
+x2[0] := 2; 
+x3[0] := 3; 
 for t from 0 to 4 do 
 x1[t+1] := (2*(1-b))*x1[t]/(alpha1*x2[t]+beta1*x3[t]+x1[t]+1)+b*x1[t]; 
 x2[t+1] := (2*(1-b))*x2[t]/(alpha2*x3[t]+beta2*x1[t]+x2[t]+1)+b*x2[t]; 
